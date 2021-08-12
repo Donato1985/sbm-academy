@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--peço desculpas por enviar assim
+		mas em algum momento, eu acabei me perdendo na 
+		aula, então não sei bem certo o que acabei deixando para trás em uma das folhas das aulas-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	body{
+		margin: 0;
+		height: 100%;
+
+	}
+	main{
+		background-color: red;
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	#pai{
+		width: 50px;
+		height: 50px;
+		background-color: yellow;
+		display: flex;
+		margin: 2px;
+	}
+	.tam_diferente{
+		width: 200px;
+		height: 200px;
+	}
+	#filho{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: 10px;
+		bottom: 0px;
+		background-color: blue;
+	}
+
+</style>
+<body>
+	<main>
+		
+	
+		<div id="pai"><div id="filho"></div></div>
+
+	</main>
+</body>
+</html>

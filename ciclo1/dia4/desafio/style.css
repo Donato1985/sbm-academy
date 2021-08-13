@@ -1,0 +1,79 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+header, footer{
+		width: 100vw;
+		height: 10vh;
+		border: 1px solid;
+		border-bottom: 1px solid #000;
+		background-color: tomato;
+		position: fixed;
+		
+
+	}
+
+header{
+		top: 0;
+	}	
+footer{
+		border-bottom: 0;
+		height: 14vh;
+		border-top: 1px solid #000;
+		position: fixed;
+		bottom: 0;
+
+
+	}
+main{
+		width: 100vw;
+		height: auto;
+		background-color: cyan;
+		
+		display: flex;
+		flex-direction: row;
+		
+
+	}
+div.text{
+		width: auto;
+		height: auto;
+		margin: 0 auto;
+		margin-top: 10.5vh;
+		margin-bottom: 15vh;
+	}
+{
+
+}
+
+.quad{
+	/*subentendo que o 20x20 é pixels, embora no momento tenha preferido utilizar vh e vw*/
+	width: 20px;
+	height: 20px;
+	background-color: green;
+	position: fixed;
+	bottom: 5vh;
+	left: 2vw;
+	z-index: 10;
+}
+
+@media screen and (max-width: 700px){
+	main{
+		flex-direction: column;
+	}
+
+.quad{display: none;}
+div.text{
+	margin: 0 auto;
+}
+#top{
+	margin-top: 10.5vh;
+}
+#bottom{
+	margin-bottom: 15vh;
+}
+}

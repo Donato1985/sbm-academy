@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Box Sizing</title>
+</head>
+<style>
+
+/* :root representa a raiz do html , dá para utilizar
+para criar tipos padrões e depois invocar com var(seu-tipo)*/
+:root{
+	--cor-padrao: red;
+	--fonte-padrao: Verdana, arial,cursive;
+}
+/*
+*{
+	background-color: var(--cor-padrao);
+}
+*/
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+
+	div#teste{
+		width: 300px;
+		height: 200px;
+		background-color: cyan;
+		border: 1px solid #000;
+		padding: 3px;
+		
+
+	}
+	p{
+		width: 300px;
+		height: auto;
+		padding: 0;
+		margin: 0;
+	}
+	#box{
+		width: 300px;
+		height: 200px;
+		background-color: cyan;
+		border: 1px solid #000;
+		margin-top: 5px;
+		box-sizing: border-box;
+	}
+
+</style>
+<body>
+	<div id="teste">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, aperiam magnam labore deserunt commodi fugit sed, doloribus in, tenetur, illum dicta? Eos corporis voluptatem soluta illo veritatis iste velit ipsum.</p>
+	</div>
+
+	<div id="box">
+		
+	</div>
+</body>
+</html>

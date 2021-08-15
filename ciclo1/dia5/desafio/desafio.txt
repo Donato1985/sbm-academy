@@ -1,0 +1,3 @@
+não pode mudar o nome, o site é do grupo de pesquisa interação e escrita
+modificar o layout da página para que ele fique responsivo, o texto fique legível em todos os aparelhos disponíveis 
+e quando chegar a 700px o menu desaparece ou ainda tornar o menu responsivo

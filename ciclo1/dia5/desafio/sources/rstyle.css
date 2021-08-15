@@ -1,0 +1,216 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	z-index: 1;
+
+}
+
+.width{
+	width: 80vw;
+}
+
+#body{
+	height: auto;
+	position: absolute;
+	left: 10vw;
+	box-shadow: 1vw 1vw 1vw 1vw rgba(0, 0, 0, 0.5);
+	margin-bottom: 1vh;
+	font-family: 'Poppins', sans-serif;
+	border-radius: 22px;
+	
+	
+}
+
+#img-topo{
+	margin-bottom: 0.25vh;
+	box-shadow: 0 1vh 1vh 0 #689F38;
+	border-top-left-radius: 22px;
+	border-top-right-radius: 22px;
+}
+
+ul{
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+li{
+	float: left;
+	margin-bottom: 0.5vh;
+}
+nav{
+	padding-left: 0.3vw;
+	padding-right: 0.3vw;
+	margin-bottom: 0.8vh;
+
+}
+
+
+a{
+	text-decoration: none;
+	font-size: 50%;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	color: #050505;
+}
+
+
+#celip{
+	padding-left: 1vw;
+
+}
+.list-menu{
+	background-image: linear-gradient(#329404,#e0f7f5,#329404);
+	border-radius: 15px;
+
+}
+p, h1{
+	padding-left: 1vw;
+}
+h1, .subtitle{
+	color: #0D47A1;
+}
+
+
+
+#equipe{
+	display: flex;
+	flex-direction: column;
+
+}
+
+div.cols{
+	display: flex;
+	margin-top: 1vh;
+
+}
+.pessoas{
+	display: flex;
+	flex-direction: column;
+}
+#col-pesquisadores, #col-estudantes, #col-secretarias, #col-cordenador, #col-vice{
+	width: 40vw;
+}
+#col-vice{
+	
+}
+
+footer{
+	margin-top: 3vh;
+	margin-bottom: 3vh;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	margin-left: 6vh;
+	margin-right: 6vh;
+	color: #9E9E9E;
+	border-top: 1px solid #E0E0E0;
+	border-bottom: 1px solid #E0E0E0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+a:hover{
+	color: whitesmoke;
+}
+
+.material-icons{
+	display: none;
+}
+
+.tooltip > .tooltiptext{
+	display: none;
+	background-color: #212121;
+	width: 100vw;
+	height: auto;
+	color: #FAFAFA;
+	border: 1px solid white;
+	position: fixed;
+	z-index: 5;
+	border-radius: 8px;
+	text-align: center;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	left: 0;
+	top: 0;
+
+
+
+}
+
+.tooltip:hover{
+	color: #0D47A1;
+}
+
+#tp1:hover > #textv, #tp2:hover > #textb {
+	display: block;
+}
+
+@media screen and (max-width: 700px){
+	.width{
+		width: 90vw;
+
+	}
+	#body{
+		left: 5vw;
+	}
+
+
+	.list-menu{
+		display: none;
+	}
+	div.cols{
+		flex-direction: column;
+
+	}
+	
+#col-pesquisadores, #col-estudantes, #col-secretarias, #col-cordenador, #col-vice{
+	width: 70vw;
+}
+#col-vice{
+}
+
+#celip{
+	margin-top: 1vh;
+}
+
+footer p{
+	font-size: 60%;
+}
+
+#body{font-size: small;}
+
+.material-icons{
+	display: inline-block;
+	float: right;
+	margin-top: 1vh;
+	margin-right: 0.5;
+	color: #024202;
+	background-color: #8def9d;
+
+}
+
+
+
+.dropdown:hover .list-menu{
+	display: flex;
+	flex-direction: column;
+
+	position: absolute;
+	width: 25vw;
+	background-image: linear-gradient(whitesmoke,#329404);
+	border-radius: 6px;
+	right: 0.5vw;
+	
+}
+
+li{
+	text-align: center;
+	margin-bottom: 0;
+}
+
+}

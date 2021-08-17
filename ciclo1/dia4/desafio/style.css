@@ -30,7 +30,7 @@ footer{
 
 	}
 main{
-		width: 100vw;
+		width: 100%;
 		height: auto;
 		background-color: cyan;
 		
@@ -56,7 +56,7 @@ div.text{
 	height: 20px;
 	background-color: green;
 	position: fixed;
-	bottom: 5vh;
+	bottom: 2vh;
 	left: 2vw;
 	z-index: 10;
 }
@@ -76,4 +76,12 @@ div.text{
 #bottom{
 	margin-bottom: 15vh;
 }
+}
+
+@media screen and (max-height: 200px){
+	.quad{
+		width: 10vh;
+		height: 10vh;
+		bottom: 1.5vh;
+	}
 }

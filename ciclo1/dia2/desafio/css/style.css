@@ -1,11 +1,15 @@
+/*reescrevi algumas coisas dado tudo o que foi passado em sala de aula, mas por questão
+de honestidade deixarei o que fiz e enviei primeiro comentado junto com o código que reescrevi
+tenho ciência que só não dá "quebra" porque o width por padrão é 100%, pois caso o contrário, a hora
+que diminuísse os elementos sairiam flutuando ou fazendo algo bizarro, mas pro exercício 1 tá valendo*/
 html, body{
-	/*Esse daqui já tira o padrão height auto
-	(evitando assim um monte de confusão)*/
-	height: 100%;
+	/*height: 100%;*/
+	height: 100vh;
 }
 
 main{
-	height: 100%;
+	/*height: 100%;*/
+	height: 100vh;
 	background-color: #fff;
 	display: flex;
 	justify-content: center;
@@ -18,38 +22,55 @@ main{
 
 
 .qgrande{
-	/*O valor da largura não tirei 'detrás da orelha',
-	calculei baseado na altura e largura do meu 
-	notebook (que peguei com python) e refatorei para
-	que ambos sejam aproximadamente do mesmo tamanho*/
-	width: 30.92%;
-	height: 55%;
-	margin: 25%;
-	margin-top: 12.5%;
+	/*width: 30.92%;*/
+	width: 90vh;
+	/*height: 55%;*/
+	height: 70vh;
+	/*margin: 25%;*/
+	position: absolute;
+	top: 16vh;
+	/*margin-top: 12.5%;*/
 	background-color: #00897B;
+
 	display: flex;
 	
 	
 }
 .qpequeno{
-	width: 30%;
-	height: 40%;
-	margin-top: 4px;
-	margin-left: 4px;
+	/*width: 30%;*/
+	width: 25vh;
+	/*height: 40%;*/
+	height: 25vh;
+	position: absolute;/*adicionei esse nessa segunda mexida*/
+	/*margin-top: 4px;
+	margin-left: 4px;*/
+	top: 1vh;
+	left: 1vh;
 	background-color: #AB47BC;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+	font-size: 5vh;/*adicionado recente, sei que o professor falou para não usar essa unidade de medida pra tamanho de fonte
+	mas funcionou maravilhosamente bem no google chrome*/
 }
 .circ{
 	border-radius: 100%;
-	width: 33%;
-	height: 39%;
-	margin-top: 45%;
-	margin-left: 35%;
+	/*width: 33%;
+	height: 39%;*/
+	width: 25vh;
+	height: 25vh;
+	/*margin-top: 45%;
+	margin-left: 35%;*/
+	position: absolute;
+	bottom: 1vh;
+	right: 1vh;
 	background-color: #F9A825;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-size: 5vh;
+
+
 }
+

@@ -43,4 +43,4 @@ var quad = num**2;
 
 document.write("O quadrado do número digitado é...: "+quad+"<br>");
 
-document.write(16*16);
+

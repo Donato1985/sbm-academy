@@ -12,7 +12,6 @@ tks
 ;)
 
 */
-var n = 2;
 
 var nome = prompt("Digite o seu nome:");
 

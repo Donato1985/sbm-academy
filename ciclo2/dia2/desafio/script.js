@@ -99,6 +99,6 @@ return nome;
 
 
 
-var nome=printar();
+nome=printar();
 
 escolher_fruta(nome);

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<script src="obj.js"></script>-->
+	<!--<script src="arr.js"></script>-->
+	<script src="eventos.js"></script>
+	<title>Aula dia 3</title>
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+	p{
+		border: 1px solid black;
+		padding: 15px;
+		width: 200px;
+		height: auto;
+
+	}
+	.corBg{
+		background-color: red;
+
+	}
+	.modal{
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0,0,0,0.4);
+		position: absolute;
+		z-index: 1;
+	}
+	main{
+
+	}
+
+</style>
+<body>
+	<div class="" id="janModal">
+		<input type="button",value='x' id="close">
+	</div>
+	<main>
+	<input type="text" id="txt" value="">
+
+	<input type="button" id="btn1" name="btn-main" value="click">
+	<p class="legenda"></p>
+	<br><br>
+	<h4>Trocar senha</h4>
+	<input type="text" id="senha" name="">
+	<input type="button" value="veja a senha" id="verSenha">
+
+	<h4>Quando perder o foco</h4>
+	<input type="text",name="" id="cxTbg">
+
+	<h4>Somar os dois valores</h4>
+	<input type="text" id="v1" name="" value="">
+	<input type="button" id="soma" name="somar" value="+">
+	<input type="text" id="v2" name="" value="">
+	<span id="resultado"></span>
+		<h4>Botão chamar modal</h4>
+		<input type="button" value="chamarModal" id="chamarModal">
+	</main>
+</body>
+</html>

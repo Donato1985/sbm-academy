@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+main{
+	width: 50vw;
+	height: 50vh;
+	position: absolute;
+	left: 25vw;
+	top: 25vh;
+}
+
+div{
+	display: flex;
+	padding-top: 1vh;
+}
+input{
+	width: 12.5vw;
+}
+span{
+	width: 10vw;
+}
+#end{
+	width: 15vw;
+	margin-top: 1vh;
+	padding-top:1vh ;
+	padding-bottom: 1vh;
+	background-color: green;
+	color: white;
+}

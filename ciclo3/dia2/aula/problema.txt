@@ -1,0 +1,3 @@
+Uma empresa do setor TIC(Tecnologia da Informação e comunicação) oferece uma série de serviços para diversos clientes.
+Essa empresa deseja ter um sistema que funcione on-line, com o acesso a internet e possibilite o controle dos seus clientes, serviços e solicitações.
+O controle implica em inserir, remover, alterar e consultar todos os envolvidos na atividade da empresa.

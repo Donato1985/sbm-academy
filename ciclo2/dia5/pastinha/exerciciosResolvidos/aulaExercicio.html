@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="aulaExercicio.js"></script>
+	<title>Exercícios</title>
+</head>
+<style>
+   *{ padding: 0; margin:0; font-family: 'Trebuchet MS','verdana','sans-sarif'; }
+   .flex {
+   	display: flex;
+   }
+   header, main{margin:0 auto; width: 80%; }
+   header { height: 250px;  background-image: linear-gradient(to  bottom right, #4b6584 , #2f3542); display: flex; align-items: center; justify-content: center;}
+   main { height: auto;  box-sizing: border-box; }
+
+   div{ width: 100%; height: auto; padding: 8px;  box-sizing: border-box; }
+   #exe1 { background-color: #3742fa; color:#fff; cursor:pointer;
+   border:1px solid #5352ed; display: flex; align-items: center; justify-content: center;}
+   #pai-0, #pai-1 {
+   	border: 1px solid #ff4757;
+   }
+   .filha { background-color: #ff6348; margin-top: 5px; display: flex; text-align: center; justify-content: center; color:##57606f; cursor: pointer; font-weight: bold;} 
+   #container-legal{background-color: #d1d8e0; display: flex; justify-content: space-between; border:1px solid #a5b1c2;}
+   #texto, #txt-1, #txt-2{ width: 48%; padding: 15px; }
+   #txt-3{width: 100%; padding: 15px; font-size: 22px; box-sizing: border-box;}
+   .botao{ width: 46%; padding: 15px; background-color: #4b7bec; color:#fff; font-weight: bold; font-size:18px; display:flex;
+   	text-align: center; justify-content: center; cursor:pointer; border-radius: 5px; border-color: 1px solid #4b7bec;}
+   	#recebe-texto{ background-color: #2d98da; margin-top:5px; margin-bottom: 5px; padding: 20px; display: flex; justify-content: center; text-align: center; color:#fed330; }
+   	#btn-concatenar-texto {padding: 15px; background-color: #4b7bec; color:#fff; font-weight: bold; font-size:18px; display:flex; box-sizing: border-box;
+   	text-align: center; justify-content: center; cursor:pointer; border-radius: 5px; border-color: 1px solid #4b7bec; width: 100%;}
+   	#btn-concatenar-texto:hover{ background-color: #eb3b5a; }
+   	#container-z{
+   		width: 100%;
+   		height: auto;
+   		margin-top:10px;
+   		background-color: #20bf6b;
+
+   	}
+   	#container-botoes{padding: 0; display: flex; justify-content: space-between; }
+   	#container-botoes > input[type=button]{ flex-basis: 33.10%; height: 100px; cursor:pointer; font-size: 28px; font-weight: bold; margin-top: 10px;}
+   	header > div {font-size: 48px; color:#fff; width: 40%; height: auto; text-align: center;
+   		}
+   	#paleta-cores{border: 1px solid #ced6e0; margin-top: 20px; display: flex; 
+   	justify-content: space-between; flex-direction: row; flex-flow: wrap; }
+   	#paleta-cores > .cores-da-paleta { border:1px solid #dfe4ea; padding: 5px; 
+   		width: 130px; height: 30px; margin: 3px; text-align: center; cursor:pointer }
+   	#content-css-cores-dispay{
+   		border: 1px solid #ced6e0;
+   		padding: 5px;
+   		margin-top: 10px;
+   		display: flex;
+   		flex-direction: row;
+   		justify-content: space-between;
+   	}
+  
+   #content-css-cores-dispay > #css-cores, #display-cores {
+   	padding: 0;
+    height: 30px;
+   }
+
+   	#css-cores{width: 30%;}
+   	#display-cores{width: 67%; background: #000;}
+
+</style>
+<body>
+	<header>
+		<div>
+		[ EXERCÍCIOS ]
+		 Prof. Marcelo
+		</div>
+	</header>		
+	<main>
+	  <!-- Exercício 1 -->	
+		<p>
+          <b>1.</b> Crie um script para enviar o texto da div abaixo para um alert em um evento de click. Ao enviar o conteúdo concatene a seguinte frase: "Este exemplo é muito simples."    
+		</p>
+		<div id="exe1"> Esta div possui um texto em seu conteúdo </div>
+        <!-- Exercicío 4 -->
+        <p>
+          <b>2.</b> A div abaixo está condicioada em um container pai, faça um script para alterar a cor para #8854d0 do evento click ao ser clicado.    
+		</p>
+		<div id="pai-0">	
+			<div class="filha" id="FilhaDoPai"> 1 </div> 			
+		</div>
+		<!-- Exercicío 3 -->	
+		<p>
+          <b>3.</b> As divs abaixo estão condicionadas em um container pai, faça um script para alterar a cor para #20bf6b do evento click ao ser clicado.    
+		</p>
+		<div id="pai-1">	
+			<div class="filha"> 1 </div> 
+			<div class="filha"> 2 </div> 
+			<div class="filha"> 3 </div> 
+		</div>
+        <p>
+        <!-- Exercicío 4 -->	
+          <b>4.</b> Crie um script para CONCATENAR os valores digitador na caixa de texto e serem impressos na DIV com o texto "LEGENDA". 
+		</p>
+
+		 <div id="container-legal"> 
+		 <input type="text" id="txt-1" name="texto" value="" placeholder="Texto qualquer">
+		 <input type="text" id="txt-2" name="texto" value="" placeholder="Texto qualquer">
+		 </div>
+		 <div id="recebe-texto">LEGENDA</div>
+		 <div id="btn-concatenar-texto">CLIQUE PARA CONCATENAR O TEXTO</div>
+
+    <!-- Exercicío 5 -->
+    <p>	
+       <b>5.</b> Crie um script para inverter qualquer palavra que seja digitada na caixa de texto. Clique no botão para que seja disparado o evento. 
+		</p>
+
+		 <div id="container-legal"> 
+			 	<input type="text" id="texto" name="texto" value="" placeholder="Texto qualquer">
+			 	<div id="botao" class="botao">CLIQUE-ME</div>
+     </div> 
+     
+     <!-- Exercicío 6 -->
+     <p>	
+      <b>6.</b> Crie um script que receba os valores de cada botão concatenados. 
+		 </p>
+
+		 <div id="container-z"> 
+		 	<input type="text" id="txt-3" name="texto" value="" placeholder="Números">
+		 	<div id="container-botoes">
+		 		<input class='btnValor' type="button" value="1">
+		 		<input class='btnValor' type="button" value="2">
+		 		<input class='btnValor' type="button" value="3">
+		 	</div>
+     </div>
+      <p>	
+          <b>7.</b> Crie um script para que no evento 'mouseover' (quando o mouse entrar no elemento) altere para a cor correspondente do conteúdo do elemento. E que, no evento 'mouseout' (quando mouse sair do elemento) a cor do elemento volte para o background 'branco'. Faça ainda uma rotina para quando o elemento for clicado, o valor do conteúdo do elemento preencha a caixa de texto e altere a div ao lado que por padrão está na cor preta. 
+			</p>
+
+
+    
+     <div id="paleta-cores"> <!-- elemento pai -->
+     	 <!-- elementos filhos  C:\paleta-cores\cores-paleta\> -->
+       <div class="cores-da-paleta">#fad390</div>
+       <div class="cores-da-paleta">#f8c291</div>
+       <div class="cores-da-paleta">#6a89cc</div>
+       <div class="cores-da-paleta">#82ccdd</div>
+       <div class="cores-da-paleta">#b8e994</div>
+       <div class="cores-da-paleta">#f6b93b</div>
+       <div class="cores-da-paleta">#e55039</div>
+       <div class="cores-da-paleta">#4a69bd</div>
+       <div class="cores-da-paleta">#60a3bc</div>
+       <div class="cores-da-paleta">#78e08f</div>
+       <div class="cores-da-paleta">#fa983a</div>
+       <div class="cores-da-paleta">#eb2f06</div>
+       <div class="cores-da-paleta">#1e3799</div>
+       <div class="cores-da-paleta">#3c6382</div>
+       <div class="cores-da-paleta">#38ada9</div>
+       <div class="cores-da-paleta">#e58e26</div>
+       <div class="cores-da-paleta">#b71540</div>
+       <div class="cores-da-paleta">#0a3d62</div>
+     </div>
+
+     <div id=content-css-cores-dispay>
+      <input type="text" name="css-cores" id="css-cores" value="#000" \>
+      <div id="display-cores"></div>
+     </div>
+     <!-- <style type="text/css">
+
+     	div#cadastro{ border:1px solid red; height: auto; }
+     	div#cadastro > .content-form {
+     	  width: 100%;  
+     	  height: auto;
+     		flex-direction: column;
+     		gap: 3px; 
+     		}
+
+     	div#cadastro > .content-form > label , 	div#cadastro > .content-form > input[type=text] {
+     		width: 100%;
+     		height: auto;
+     		background-color: red;
+     	}
+     	div#cadastro > .content-form > label{
+     		padding: 3px;
+     	}
+     	.flex-column {
+     		flex-direction: column;
+     	}
+
+     	#cadastro >.content-form > #painelControles > #voltar, #avancar { width: 160px; height: 60px; font-size: 48px; 
+     	}
+     </style>
+
+     <div id="cadastro" class="flex flex-column">
+     	<div class="content-form flex">
+     	 <label style="width: 50px" class="flex flex-column">Codigo
+     	 <input type="text" id="codigo" name="">
+     	 </label>
+     	 <label  class="flex flex-column">Nome
+     	 <input id="nome" type="text" name="">
+     	 </label>
+     	 <label  class="flex flex-column">Profissão
+     	 <input id="profissao" type="text" name="">     	 
+     	 </label>
+     	 <div id="painelControles" class="flex"> 
+     	 	<input type="button" name="voltar" id="voltar" value="<">
+     	 <input type="button" name="avancar" id="avancar" value=">">
+     	 </div>
+     	</div>
+     	 
+     </div>
+      -->
+	</main>
+	
+</body>
+</html>

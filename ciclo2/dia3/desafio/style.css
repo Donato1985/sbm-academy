@@ -4,12 +4,24 @@
 	box-sizing: border-box;
 
 }
+
 main{
 	width: 50vw;
 	height: 50vh;
 	position: absolute;
 	left: 25vw;
 	top: 25vh;
+	
+
+}
+#main{
+	display: flex;
+	flex-direction: column;
+	width: 25vw;
+	background-color: whitesmoke;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	padding-left: 1vw;
 }
 
 div{

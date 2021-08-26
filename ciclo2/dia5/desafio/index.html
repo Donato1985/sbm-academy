@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="script.js" type="module"></script>
+	<title>Desafio</title>
+</head>
+
+<body>
+	<div id="header">
+		<header>
+			<h1>ME ACHA!</h1>
+			<span>Encontre um endereço pelo número do cep</span>
+		</header>
+		<span class="material-icons">
+				travel_explore
+		</span>
+	</div>
+	<main>
+		<div>
+			<span>Cep</span>
+			<input type="text" id="cep">
+		</div>
+		<div>
+			<span>Rua</span>
+			<input type="disabled" id="logradouro">
+		</div>
+		<div>
+			<span>Bairro</span>
+			<input type="disabled" id="bairro">
+		</div>
+		<div>
+			<span>Cidade</span>
+			<input type="disabled" id="localidade">
+		</div>
+		<div>
+			<span>Estado</span>
+			<input type="disabled" id="uf">
+		</div>
+		
+		<input type="button" id="search" value="BUSCAR">
+	</main>
+	
+</body>
+</html>

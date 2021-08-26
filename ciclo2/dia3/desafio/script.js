@@ -14,12 +14,11 @@ function isNum(string){
 	/*Função que analiza uma string e retorna true
 	se todos os caracteres forem numerais ou false
 	caso contrário*/
-	for(let x=0; x<string.length;x++){
-		if(isNaN(Number(string[x]))){
-			return false;
-		}
+	if(isNaN(Number(string))){
+		return false;
 	}
-return true;
+	return true;
+	
 }
 
 window.onload=function() {
@@ -43,7 +42,7 @@ window.onload=function() {
 		}else{
 			alert("Errou.")
 		}
-	})
+	});
 
 
 }

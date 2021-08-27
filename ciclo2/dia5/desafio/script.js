@@ -6,6 +6,22 @@ window.onload = function(){
 
 	const cep = document.querySelector("#cep");
 	const search = document.querySelector("#search");
+	function treat_cep(cep){
+
+		for(let x of cep){
+			if(isNaN(x)){
+				cep=cep.replace(x,'');
+				console.log(cep);
+			}
+
+		}
+		if(cep.length!=8){
+			alert("Digite o cep corretamente");
+			
+		}else{
+		return cep;
+		}
+	}
 
 	const data = async function(busca){
 
@@ -31,7 +47,9 @@ window.onload = function(){
 	search.addEventListener('click',()=>{
 
 			let busca=cep.value;
+			busca=treat_cep(busca);
 			data(busca);
+			
 
 
 	});

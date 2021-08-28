@@ -10,7 +10,8 @@ window.onload = function(){
 
 		for(let x of cep){
 			if(isNaN(x)){
-				cep=cep.replace(x,'');
+				let regx=new RegExp(x, 'gi');//Criei essa classe para criar minha expressão regular lembrando do problema que enfrentamos em sala de aula, que não conseguíamos por uma variável como regex
+				cep=cep.replace(regx,'');
 				console.log(cep);
 			}
 

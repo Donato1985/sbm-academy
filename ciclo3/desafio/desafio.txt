@@ -1,0 +1,9 @@
+//Que outras informações (objetos) para controle vocẽ incluiria no projeto da Services TIAcademy?
+//Pense em um outro problema similar a controle da venda de serviços que você poderia implementar
+
+faria um levantamento de apis públicas de redes sociais nas quais possa capturar informações legais de potenciais compradores dos serviços da TIAcademy,
+para montar um banco de dados iniciais paralelo que englobe o banco de dados de clientes que compraram e gostaram dos serviços, e através dessas informações gerar o
+conhecimento necessário para posteriores campanhas de marketing mais acertivas e com mais chances de encontrar clientes que já procurem o perfil de serviço que a 
+TIAcademy oferece.
+
+  

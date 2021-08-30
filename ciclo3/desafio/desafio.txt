@@ -6,4 +6,9 @@ para montar um banco de dados iniciais paralelo que englobe o banco de dados de 
 conhecimento necessário para posteriores campanhas de marketing mais acertivas e com mais chances de encontrar clientes que já procurem o perfil de serviço que a 
 TIAcademy oferece.
 
+
+colocar o cliente e retornar o valor de todos os serviços
+qual é o valor que o cliente x gastou 
+na services ti?
+site:https://sequelize.org/master/manual/model-querying-basics.html#grouping
   

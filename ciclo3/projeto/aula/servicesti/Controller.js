@@ -158,6 +158,123 @@ app.get('/somapornome/:id',async(req,res)=>{
 });
 
 
+app.get('/atualizaservico',async(req,res)=>{
+	await servico.findByPk(1).then(servico =>{
+		servico.nome='HTML/CSS/JS';
+		servico.descricao='Páginas estáticas e dinâmicas';
+		servico.save();
+		return res.json({servico})
+	});
+});
+
+app.put('/editarservico',(req,res)=>{
+	servico.update(req.body,{
+		where: {id: req.body.id}
+	}).then(()=>{
+		return res.json({
+			error: false,
+			message: "Serviço alterado com sucesso"
+		})
+	}).catch((erro)=>{
+		return res.status(400).json({
+			error: true,
+			message: "Erro na alteração de serviço"
+		});
+	});
+});
+
+app.get('/servicospedidos',async(req,res)=>{
+	await servico.findByPk(1,{include:[{all:true}]})
+	.then(servico =>{
+		return res.json({servico});
+	});
+});
+
+
+app.put('/editarpedido', (req,res)=>{
+	pedido.update(req.body,{
+		where: {ServicoId: req.body.ServicoId}
+	}).then(()=>{
+		return res.json({
+			error: false,
+			message: "Pedido modificado com sucesso."
+		});
+	}).catch((erro)=>{
+		return res.status(400).json({
+			error: true, 
+			message: "Erro na modificação do pedido!"
+		});
+	});
+});
+
+
+app.get('/servicosdeclientes/:id',async(req,res)=>{
+	//exercício 1 do dia 5 do ciclo 3
+	await cliente.findByPk(req.params.id,{include:[{all:true}]})
+	.then(servicos =>{
+		return res.json({servicos});
+	});
+
+});
+
+
+app.put('/editarcliente',(req,res)=>{
+	cliente.update(req.body,{
+		where: {id: req.body.id}
+	}).then(()=>{
+		return res.json({
+			error: false,
+			message: "Dados do cliente atualizados com sucesso."
+		});
+	}).catch((erro)=>{
+		return res.status(400).json({
+			error: true,
+			message: "Erro ao tentar atualizar cliente."
+		});
+	});
+});
+
+app.put('/editarpedidoporid/:id',(req,res)=>{
+	pedido.update(req.body,{
+		where: {id: req.params.id}
+	}).then(()=>{
+		return res.json({
+			error: false,
+			message: "Pedido atualizado com sucesso!"
+		});
+	}).catch((erro)=>{
+		res.status(400).json({
+			error: true,
+			message: "Falha ao atualizar pedido."
+		})
+	});
+});
+
+
+app.get('/excluircliente',async(req,res)=>{
+	cliente.destroy({
+		where: {id: 4444}
+	});
+	res.send("Cliente excluído com sucesso.")
+});
+
+app.delete('/apagarcliente/:id',(req,res)=>{
+	cliente.destroy({
+		where: {id: req.params.id}
+	}).then(()=>{
+		return res.json({
+			error: false,
+			message: "Cliente deletado com sucesso."
+		});
+	}).catch(()=>{
+		return res.status(400).json({
+			error: true,
+			message: "Não foi possível excluir o cliente."
+		});
+	});
+});
+
+
 let port=process.env.PORT || 3000;
 
 app.listen(port,(req,res)=>{

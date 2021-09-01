@@ -275,6 +275,32 @@ app.delete('/apagarcliente/:id',(req,res)=>{
 });
 
 
+app.get('/pedidosdeclientes/:id',async(req,res)=>{
+	//desafio 1 do dia 5 do ciclo 3
+	await cliente.findByPk(req.params.id,{include:[{all:true}]})
+	.then(servicos =>{
+		return res.json({servicos});
+	});
+
+});
+
+app.put('/alterarcliente/:id',(req,res)=>{
+	cliente.update(req.body,{
+		where: {id: req.params.id}
+	}).then(()=>{
+		return res.json({
+			error: false,
+			message: "Cliente atualizado com sucesso!"
+		});
+	}).catch((erro)=>{
+		res.status(400).json({
+			error: true,
+			message: "Falha ao atualizar cliente."
+		})
+	});
+});
+
+
 let port=process.env.PORT || 3000;
 
 app.listen(port,(req,res)=>{

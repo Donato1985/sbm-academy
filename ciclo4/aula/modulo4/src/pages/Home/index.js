@@ -1,7 +1,35 @@
+import  {Container} from 'reactstrap';
+
 export const Home= ()=>{
 	return(
 		<div>
-			<h1>Página inicial</h1>
+			<Container>
+				<div className="d-flex">
+					<div className="mr-auto p-2">
+
+						<h1>Página inicial</h1>
+
+					</div>
+					<div className="p-2">
+
+						<a href="/visualizarcliente"
+						className="btn btn-outline-info btn-sm">Cliente</a>
+
+
+					</div>
+					<div className="p-2">
+
+						<a href="/visualizarservico"
+						className="btn btn-outline-info btn-sm">Serviço</a>
+
+
+					</div>
+
+
+				</div>
+				
+			</Container>
+			
 		</div>
 		)
 }

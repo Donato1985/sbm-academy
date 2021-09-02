@@ -7,11 +7,6 @@ import{
 	Nav,
 	NavItem,
 	NavLink,
-	UncontrolledDropdown,
-	DropdownToggle,
-	DropdownMenu,
-	DropdownItem,
-	NavbarText,
 	Container
 } from 'reactstrap';
 
@@ -25,7 +20,7 @@ export const Menu = (props)=>{
 	const toggle = () => setIsOpen(!isOpen);
 	return(
 		<div>
-			<Navbar color="info" dark expand="md">
+			<Navbar color="primary" dark expand="md">
 				<Container>
 					<NavbarBrand href="/">Services TI Academy</NavbarBrand>
 					<NavbarToggler onClick={toggle}/>

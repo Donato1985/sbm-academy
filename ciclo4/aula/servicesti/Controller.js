@@ -66,9 +66,9 @@ app.get('/ofertas',async(req,res)=>{
 });
 
 
-app.get('/servico/:id',async(req,res)=>{
+app.get('/visualizarservico/:id',async(req,res)=>{ 
 	servico.findByPk(req.params.id)
-	.then(servico =>{
+	.then((servico) =>{
 		return res.json({
 			error: false,
 			servico
@@ -301,10 +301,8 @@ app.put('/alterarcliente/:id',(req,res)=>{
 });
 
 
-let port=process.env.PORT || 3000;
+let port=process.env.PORT || 3001;
 
 app.listen(port,(req,res)=>{
 	console.log('Servidor ativo')
 });
-
-export app

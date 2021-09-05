@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
+
 import{
+
 	Collapse,
 	Navbar,
 	NavbarToggler,
@@ -13,27 +15,42 @@ import{
 
 
 
-
 export const Menu = (props)=>{
+
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggle = () => setIsOpen(!isOpen);
 	return(
 		<div>
-			<Navbar color="primary" dark expand="md">
+			<Navbar color="info" dark expand="md">
 				<Container>
 					<NavbarBrand href="/">Services TI Academy</NavbarBrand>
 					<NavbarToggler onClick={toggle}/>
 					<Collapse isOpen={isOpen} navbar>
 						<Nav className="mr-auto" navbar>
 							<NavItem>
-									<NavLink href="/">Home</NavLink>
-							</NavItem>	
+								<NavLink href="/">Home</NavLink>
+
+
+							</NavItem>
+
+
+
 						</Nav>
+
+
+
 					</Collapse>
 
+
+
 				</Container>
+
+
+
+
 			</Navbar>
+
 		</div>
 		);
 };

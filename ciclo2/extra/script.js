@@ -343,14 +343,19 @@ funcionário teve gratificação de R$ 600,00 e paga imposto de 10% sobre o sal�
 
 			  }
 			  nan(lucrar(),`Lucro do distribuidor: R$${lucrar()}<br>`);
-			  nan(impostos(),`Impostos: R$${impostos()}<br>`);
+			  nan(imp/ostos(),`Impostos: R$${impostos()}<br>`);
 			  nan(totalizar(),`Valor final: R$${totalizar()}<br>`);
 
 
 			 
 
 		}
-		exe_2_1();
+		//exe_2_1();
+		function exe_2_2(){
+			
+
+			
+		}
 
 
 }

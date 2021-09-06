@@ -6,7 +6,7 @@ import {api} from '../../../config';
 import {Alert} from 'reactstrap'
 
 export const Servico = (props) =>{
-	console.log(props.match);
+	//console.log(props.match);
 
 	const [data, setData] = useState([]);
 	const [id, setId] = useState(props.match.params.id);
@@ -22,7 +22,7 @@ export const Servico = (props) =>{
 	useEffect(() => {
 		const getServico = async() => {
 			await axios.get(api+"/visualizarservico/"+id).then((response) => {
-				console.log(response.data.servico);
+				//console.log(response.data.servico);
 				setData(response.data.servico);
 			})
 			.catch(() => {
@@ -43,7 +43,7 @@ export const Servico = (props) =>{
 			<Container>
 				<div className="d-flex">
 					<div className="mr-auto p-2">
-						<h1>Quantidade de pedidos do serviço</h1>
+						<h1>Serviço solicitado</h1>
 					</div>
 					<div className="p-2">
 						<Link to="/visualizar-servicos" className="btn btn-outline-success btn-sm">

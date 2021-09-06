@@ -72,15 +72,45 @@ app.get('/visualizarservico/:id',async(req,res)=>{
 		return res.json({
 			error: false,
 			servico
+		})
 		}).catch(function(erro){
 			return res.status(400).json({
 				error:true,
 				message:"Código não está cadastrado!"
 			});
-		});
 	});
 });
 
+app.get('/visualizarpedido/:id', async(req, res)=>{
+	pedido.findByPk(req.params.id)
+	.then((pedido)=>{
+		return res.json({
+			error: false,
+			pedido
+		})
+		}).catch((erro)=>{
+			return res.status(400).json({
+				error: true,
+				message: "Pedido não cadastrado!"
+			})
+		})
+	});
+
+
+app.get('/visualizarcliente/:id', async(req, res)=>{
+	cliente.findByPk(req.params.id)
+	.then((cliente)=>{
+		return res.json({
+			error: false,
+			cliente
+		})
+			}).catch((erro)=>{
+				return res.status(400).json({
+					error: true,
+					message: "Cliente não cadastrado!"
+				});
+	});
+});
 
 app.get('/clientes', async(req,res)=>{
 	//exercíco 1 do dia 4

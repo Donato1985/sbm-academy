@@ -39,9 +39,6 @@ export const Home = ()=>{
 							Serviço
 						</a>
 					</div>
-
-
-
 				</div>
 
 			</Container>

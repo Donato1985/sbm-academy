@@ -21,7 +21,8 @@ export const VisualizarPedido = ()=>{
 	const getPedidos= async()=>{
 		await axios.get(api+"/listapedidos")
 		.then((response)=>{
-			setData(response.data.pedidos);
+			
+				setData(response.data.pedidos);
 		}
 
 
@@ -36,7 +37,7 @@ export const VisualizarPedido = ()=>{
 
 	useEffect(()=>{
 		getPedidos();
-	});
+	},[]);
 
 	return(
 
@@ -44,7 +45,7 @@ export const VisualizarPedido = ()=>{
 			<Container>
 				<h1>Página de Pedidos</h1>
 				{status.type === 'error' ? <Alert color="danger">{status.message}</Alert>:""}
-				<Table>
+				<Table striped>
 					<thead>
 
 						<tr>

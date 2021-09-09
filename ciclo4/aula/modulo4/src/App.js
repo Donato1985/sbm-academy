@@ -7,6 +7,7 @@ import {Menu} from './components/Menu';
 import {Servico} from './pages/Servico/Servico/';
 import {Pedido} from './pages/Pedido/Pedido/';
 import {Cliente} from './pages/Cliente/Cliente';
+import {CadastrarServico} from './pages/Servico/CadastrarServico/';
 
 
 
@@ -24,6 +25,8 @@ function App() {
             <Route path="/servico/:id" component={Servico}/>
             <Route path="/pedido/:id" component={Pedido}/>
             <Route path="/cliente/:id" component={Cliente}/>
+            <Route path="/cadastrarservico" component={CadastrarServico}/>
+            
 
 
 

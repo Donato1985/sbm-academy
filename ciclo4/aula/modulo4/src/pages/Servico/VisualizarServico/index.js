@@ -19,7 +19,9 @@ export const VisualizarServico = ()=>{
 	//função assícrona que vai pegar os registros do banco de dados
 	const getServicos = async() =>{
 		await axios.get(api+"/listaservicos").then((response) => {
-				setData(response.data.servicos);
+				
+					setData(response.data.servicos);
+				
 			})
 			.catch(() =>{
 				setStatus({
@@ -33,7 +35,7 @@ export const VisualizarServico = ()=>{
 	//instancia a função, chama ela pra funcionar
 	useEffect(()=>{
 		getServicos();
-	});
+	},[]);
 
 	return(
 
@@ -42,6 +44,27 @@ export const VisualizarServico = ()=>{
 
 				<h1>Página de serviços</h1>
 				{status.type === 'error' ? <Alert color="danger">{status.message}</Alert>:""}
+				
+				<div className="d-flex">
+					<div className="mr-auto p-2">
+
+						<h1>Informações do Serviço</h1>
+					</div>
+					
+
+					<div className="p-2">
+						<div>
+							<Link to="/cadastrarservico"
+							className="btn btn-outline-primary  btn-sm">
+							Cadastrar</Link>
+
+
+						</div>
+
+					</div>
+				</div>
+
+
 				<Table striped>
 
 					<thead>

@@ -23,6 +23,7 @@ export const Servico = (props) =>{
 		const getServico = async() => {
 			await axios.get(api+"/visualizarservico/"+id).then((response) => {
 				//console.log(response.data.servico);
+				
 				setData(response.data.servico);
 			})
 			.catch(() => {
@@ -34,7 +35,7 @@ export const Servico = (props) =>{
 			});
 		};
 		getServico();
-	},[id]);
+	},[]);
 
 	
 	return(

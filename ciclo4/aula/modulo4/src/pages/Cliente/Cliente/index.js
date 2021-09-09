@@ -9,7 +9,6 @@ import {Alert} from 'reactstrap';
 export const Cliente =(props)=>{
 	//console.log(props.match.params);
 
-
 	const [data, setData] = useState([]);
 
 	const [id, setId] = useState(props.match.params.id);
@@ -24,7 +23,9 @@ export const Cliente =(props)=>{
 		await axios.get(api+`/visualizarcliente/${id}`)
 		.then((response)=>{
 			//console.log(response.data.cliente);
+			
 			setData(response.data.cliente);
+			
 		})
 		.catch(()=>{
 			setStatus({
@@ -34,9 +35,15 @@ export const Cliente =(props)=>{
 		});
 	};
 
+	
+
 	useEffect(()=>{
+
 		getCliente();
-	});
+
+ 		//console.log(cont)		
+		
+	},[]);
 
 	return(
 

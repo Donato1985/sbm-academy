@@ -22,7 +22,9 @@ const getClientes = async()=>{
 
 	await axios.get(api+"/clientes")
 	.then((response)=>{
+	
 		setData(response.data.clientes);
+
 	})
 	.catch(
 			setStatus({
@@ -37,7 +39,9 @@ const getClientes = async()=>{
  	getClientes();
  }
 
- 	);
+ 	,[]);
+
+
 
 
 	return(

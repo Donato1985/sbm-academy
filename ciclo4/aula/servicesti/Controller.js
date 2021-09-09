@@ -32,7 +32,15 @@ app.post('/cliente',async(req,res)=>{
 });
 
 app.post('/servicos',async(req,res)=>{
-	let create=await servico.create(
+
+	await aguardar(3000);
+
+	function aguardar(ms){
+		return new Promise((resolve)=>{
+			setTimeout(resolve,ms);
+		})
+	}
+	await servico.create(
 
 		req.body
 		
@@ -87,14 +95,11 @@ app.get('/visualizarpedido/:id', async(req, res)=>{
 		return res.json({
 			error: false,
 			pedido
-		})
-		}).catch((erro)=>{
-			return res.status(400).json({
-				error: true,
-				message: "Pedido não cadastrado!"
 			})
 		})
-	});
+		
+		});
+
 
 
 app.get('/visualizarcliente/:id', async(req, res)=>{

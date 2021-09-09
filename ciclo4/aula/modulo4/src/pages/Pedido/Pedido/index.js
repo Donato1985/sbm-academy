@@ -24,7 +24,9 @@ export const Pedido =(props)=>{
 	const getPedido= async()=>{
 		await axios.get(api+`/visualizarpedido/${id}`)
 		.then((response)=>{
+			if(data.length===0){
 			setData(response.data.pedido)
+			};
 		}).catch(()=>{
 			setStatus({
 				type: 'error',
@@ -33,13 +35,14 @@ export const Pedido =(props)=>{
 		});
 	}
 
+
 	useEffect(()=>{
 
-		getPedido()
+		getPedido();
 
 	}
 
-		)
+		,[])
 
 
 	return(

@@ -39,11 +39,48 @@ export const VisualizarPedido = ()=>{
 		getPedidos();
 	},[]);
 
+	const apagarPedido = async(idPedido)=>{
+ 		//console.log(idCliente);
+ 		const headers={
+ 			'Content-Type':'application/json'
+ 		}
+ 		await axios.delete(api+"/apagarpedido/"+idPedido,{headers})
+ 		.then((response)=>{
+ 			console.log(response.data.error);
+ 			getPedidos();
+ 		})
+ 		.catch(()=>{
+ 			setStatus({
+ 				type: 'error',
+ 				message: "Erro: Não foi possível se conectar com a API."
+ 			});
+ 		});
+
+ 	};
+
 	return(
 
 		<div>
 			<Container>
 				<h1>Página de Pedidos</h1>
+				<div className="d-flex">
+					<div className="mr-auto p-2">
+
+						<h1>Informações do pedido</h1>
+					</div>
+					
+
+					<div className="p-2">
+						<div>
+							<Link to="/cadastrarpedido" className="btn btn-outline-primary  btn-sm">
+							Cadastrar
+							</Link>
+
+
+						</div>
+
+					</div>
+				</div>
 				{status.type === 'error' ? <Alert color="danger">{status.message}</Alert>:""}
 				<Table striped>
 					<thead>
@@ -78,6 +115,15 @@ export const VisualizarPedido = ()=>{
 									</Link>
 
 								</td>
+								
+								<td className="text-center">
+								<Link to={`/editarpedido/${item.id}`}
+								className="btn btn-outline-warning btn-sm">Editar</Link>
+
+								<span className="btn btn-outline-danger btn-sm mr-1"
+								onClick={()=>apagarPedido(item.id)}>Excluir</span>
+
+							</td>
 
 							</tr>
 						))}

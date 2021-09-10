@@ -8,6 +8,12 @@ import {Servico} from './pages/Servico/Servico/';
 import {Pedido} from './pages/Pedido/Pedido/';
 import {Cliente} from './pages/Cliente/Cliente';
 import {CadastrarServico} from './pages/Servico/CadastrarServico/';
+import {CadastrarCliente} from './pages/Cliente/CadastrarCliente/';
+import {CadastrarPedido} from './pages/Pedido/CadastrarPedido/';
+import {EditarServico} from './pages/Servico/EditarServico/';
+import {EditarCliente} from './pages/Cliente/EditarCliente/';
+import {EditarPedido} from './pages/Pedido/EditarPedido/';
+
 
 
 
@@ -25,8 +31,15 @@ function App() {
             <Route path="/servico/:id" component={Servico}/>
             <Route path="/pedido/:id" component={Pedido}/>
             <Route path="/cliente/:id" component={Cliente}/>
+            //relativo a aula 3 do ciclo 4
             <Route path="/cadastrarservico" component={CadastrarServico}/>
-            
+            <Route path="/cadastrarcliente" component={CadastrarCliente}/>
+            <Route path="/cadastrarpedido" component={CadastrarPedido}/>
+            //relativo a aula 4 do ciclo 4
+            <Route path="/editarservico/:id" component={EditarServico}/>
+            <Route path="/editarcliente/:id" component={EditarCliente}/>
+            <Route path="/editarpedido/:id" component={EditarPedido}/>
+           
 
 
 

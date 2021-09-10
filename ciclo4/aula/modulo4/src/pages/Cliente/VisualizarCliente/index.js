@@ -41,7 +41,24 @@ const getClientes = async()=>{
 
  	,[]);
 
+ 	const apagarCliente = async(idCliente)=>{
+ 		//console.log(idCliente);
+ 		const headers={
+ 			'Content-Type':'application/json'
+ 		}
+ 		await axios.delete(api+"/apagarcliente/"+idCliente,{headers})
+ 		.then((response)=>{
+ 			console.log(response.data.error);
+ 			getClientes();
+ 		})
+ 		.catch(()=>{
+ 			setStatus({
+ 				type: 'error',
+ 				message: "Erro: Não foi possível se conectar com a API."
+ 			});
+ 		});
 
+ 	};
 
 
 	return(
@@ -51,7 +68,24 @@ const getClientes = async()=>{
 
 				<h1>Página de clientes</h1>
 				{status.type === 'error' ? <Alert color="danger">{status.message}</Alert>:""}
+				<div className="d-flex">
+					<div className="mr-auto p-2">
 
+						<h1>Informações do CLiente</h1>
+					</div>
+					
+
+					<div className="p-2">
+						<div>
+							<Link to="/cadastrarcliente"
+							className="btn btn-outline-primary  btn-sm">
+							Cadastrar</Link>
+
+
+						</div>
+
+					</div>
+				</div>
 				<Table striped>
 					<thead>
 						<tr>
@@ -80,6 +114,14 @@ const getClientes = async()=>{
 										className="btn btn-outline-primary btn-sm">Consultar</Link>
 
 								</td>
+								<td className="text-center">
+								<Link to={`/editarcliente/${item.id}`}
+								className="btn btn-outline-warning btn-sm">Editar</Link>
+
+								<span className="btn btn-outline-danger btn-sm mr-1"
+								onClick={()=>apagarCliente(item.id)}>Excluir</span>
+
+							</td>
 
 
 							</tr>

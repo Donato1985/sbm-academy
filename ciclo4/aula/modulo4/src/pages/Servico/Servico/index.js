@@ -47,9 +47,16 @@ export const Servico = (props) =>{
 						<h1>Serviço solicitado</h1>
 					</div>
 					<div className="p-2">
-						<Link to="/visualizar-servicos" className="btn btn-outline-success btn-sm">
+						<Link to={"/visualizar-servicos"} className="btn btn-outline-success btn-sm">
 							Serviços
 						</Link>
+
+					</div>
+					<div className="p-2">
+						<Link to={"/editarservico/"+data.id} className="btn btn-outline-warning btn-sm">
+							Editar
+						</Link>
+					
 					</div>
 				</div>
 				<hr className="m-1"/>

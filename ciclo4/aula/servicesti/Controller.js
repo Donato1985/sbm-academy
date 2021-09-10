@@ -22,7 +22,7 @@ app.get('/',function(req,res){
 });
 
 
-app.post('/cliente',async(req,res)=>{
+app.post('/clientes',async(req,res)=>{
 	let create=await cliente.create(
 
 		req.body
@@ -32,7 +32,9 @@ app.post('/cliente',async(req,res)=>{
 });
 
 app.post('/servicos',async(req,res)=>{
-
+	/*A função aguardar está aqui para exemplo da aula 3 do ciclo 4
+	não vou implementar isso nas outras funçõe por que não faz sentido 
+	simplesmente atrasar tudo por atrasar, mas quando eu precisar tenho uma referência aqui*/
 	await aguardar(3000);
 
 	function aguardar(ms){
@@ -54,7 +56,7 @@ app.post('/pedidos', async(req,res)=>{
 		req.body
 
 		);
-	res.send('E é aqui que você vai fazer os seus pedidos');
+	res.send('Pedido cadastrado.');
 });
 
 
@@ -310,6 +312,44 @@ app.delete('/apagarcliente/:id',(req,res)=>{
 });
 
 
+app.delete('/apagarservico/:id',(req,res)=>{
+	servico.destroy({
+		where: {id: req.params.id}
+	})
+	.then(()=>{
+		return res.json({
+			error: false,
+			message: "Serviço apagado com sucesso"
+		})
+	})
+	.catch(()=>{
+		return res.status(400).json({
+			error: true,
+			message: "Não foi possível excluir o serviço."
+		});
+	});
+});
+
+app.delete('/apagarpedido/:id',(req,res)=>{
+	pedido.destroy({
+		where: {id: req.params.id}
+	})
+	.then(()=>{
+		return res.json({
+			error: false,
+			message: "Pedido apagado com sucesso"
+		})
+	})
+	.catch(()=>{
+		return res.status(400).json({
+			error: true,
+			message: "Não foi possível se conectar a API."
+		})
+	})
+})
+
+
+
 app.get('/pedidosdeclientes/:id',async(req,res)=>{
 	//desafio 1 do dia 5 do ciclo 3
 	await cliente.findByPk(req.params.id,{include:[{all:true}]})
@@ -319,7 +359,7 @@ app.get('/pedidosdeclientes/:id',async(req,res)=>{
 
 });
 
-app.put('/alterarcliente/:id',(req,res)=>{
+app.put('/alterarcliente',(req,res)=>{
 	cliente.update(req.body,{
 		where: {id: req.params.id}
 	}).then(()=>{

@@ -37,6 +37,27 @@ export const VisualizarServico = ()=>{
 		getServicos();
 	},[]);
 
+	const apagarServico= async(idServico)=>{
+		console.log(idServico);
+
+		const headers ={
+			'Content-Type': 'application/json' 
+		};
+
+		await axios.delete(api+"/apagarservico/"+idServico,{headers})
+		.then((response)=>{
+			console.log(response.data.error);
+			getServicos();
+		})
+		.catch(()=>{
+			setStatus({
+				type: 'error',
+				message: "Erro: Não foi possível se conectar a API."
+			});
+		});
+
+	}
+
 	return(
 
 		<div>
@@ -84,6 +105,14 @@ export const VisualizarServico = ()=>{
 							<td className="text-center">
 								<Link to={`/servico/${item.id}`}
 								className="btn btn-outline-primary btn-sm">Consultar</Link>
+
+							</td>
+							<td className="text-center">
+								<Link to={`/editarservico/${item.id}`}
+								className="btn btn-outline-warning btn-sm">Editar</Link>
+
+								<span className="btn btn-outline-danger btn-sm mr-1"
+								onClick={()=>apagarServico(item.id)}>Excluir</span>
 
 							</td>
 							</tr>

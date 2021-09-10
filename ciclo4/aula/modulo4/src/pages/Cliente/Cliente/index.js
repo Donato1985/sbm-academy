@@ -59,6 +59,11 @@ export const Cliente =(props)=>{
 						<Link to="/visualizar-clientes"
 						className="btn btn-outline-success btn-sm">Voltar</Link>
 					</div>
+					<div className="p-2">
+						<Link to={"/editarcliente/"+data.id} className="btn btn-outline-warning btn-sm">
+							Editar
+						</Link>
+					</div>					
 				</div>
 				<hr className="m-1"/>
 				{status.type === 'error' ? <Alert color="danger">{status.message}</Alert>:""}

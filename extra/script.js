@@ -1037,13 +1037,370 @@ funcionário teve gratificação de R$ 600,00 e paga imposto de 10% sobre o sal�
 				  }
 			}
 			//exe_4_15();
-			function exe_5_1(){return;}
+			function exe_5_1(){
+
+				let arr=[];
+				for(let x=0;x<10;x++){
+					arr.push(Number(prompt(`Insira o dado da posição ${x+1}`)))
+				}
+				let soma=0
+				for(let x=0;x<arr.length;x++){
+					soma+=arr[x]
+				}
+				nan(soma,`Soma de todos os dados do array: ${soma}<br>`)
+				nan(soma,`Média dos termos: ${soma/arr.length}`)
+				
+			}
+			//exe_5_1();
+			function exe_5_2(){
+				/*Desenvolva um algoritmo que preencha um vetor de 5 posições com valores reais
+				  compreendidos entre 1 e 100 (suponha que o usuário irá respeitar o enunciado). Ao
+				  final, o algoritmo deve mostrar, na tela, o conteúdo de cada posição do vetor, dividido
+				  por 100.*/
+				  let arr=[];
+				  for(let x=0; x<5;x++){
+				  	arr.push(Number(prompt(`insira o ${x+1}º dado:`)))
+				  }
+				  for(let x=0; x<arr.length;x++){
+				  	nan(1,`${x+1}º termo dividido por 100: ${arr[x]/100}<br>`)
+				  }
+			}
+			//exe_5_2();
+			const exe_5_3=()=>{
+				/*Desenvolva um algoritmo que preencha um vetor numérico de 10 posições. Após
+				  preencher todo o vetor, o usuário deve inserir uma chave de busca X. Caso exista
+				  algum número igual a X, dentro do vetor, o algoritmo deve mostrar, na tela, o índice
+				  da primeira posição na qual X foi encontrado. Caso contrário, o algoritmo deve se
+				  encerrar com uma única mensagem, dizendo "Chave não encontrada.".*/
+				  let arr=[]
+				  for(let j=0; j<10;j++){
+				  	arr.push(Number(prompt(`Digite o ${j+1}º número:`)))
+
+				  }
+				  
+				  let x=Number(prompt(`Qual número você quer buscar?`))
+				  
+
+				  if(arr.indexOf(x)===(-1)){
+				  	nan(1,`Chave não encontrada`)
+				  }else{
+				  	nan(arr.indexOf(x),`A primeira ocorrência de ${x} é na ${arr.indexOf(x)+1}ª posição.`)
+				  }
+
+			}
+			//exe_5_3();
+			const exe_5_4=()=>{
+				/*Faça um programa que carregue um vetor e
+				  nove elementos numéricos inteiros, calcule e mostre os números primos e suas
+				  respectivas posições.*/
+				  let arr=[];
+				  for(let x=0;x<9;x++){
+				  	arr.push(Number(prompt(`Digite o ${x+1}º número:`)));
+				  			}
+
+				  const primo=(n)=>{
+				  	for(let x=2; x<n;x++){
+				  		if(n%x===0 || n<2){
+				  			return false;
+				  			}
+				  		}
 
 
 
+				  	
+				  	return true;
+				  }
+
+				  
+				  for(let x=0;x<arr.length; x++){
+				  	if(primo(arr[x])){
+				  		nan(arr[x],`${arr[x]} é primo e está na ${arr.indexOf(arr[x])+1}ª posição.<br>`)
+				  		}
 
 
+				  	}
 
+				  	
+				  
+
+			}
+
+			//exe_5_4();
+			const exe_5_5=()=>{
+
+				/*Faça um programa que carregue dois
+				  vetores de dez elementos numéricos cada um e mostre um vetor resultante da
+				  intercalação desses dois vetores.*/
+				  let arr1=[];
+				  let arr2=[];
+				  for(let x=0;x<10;x++){
+				  	arr1.push(Number(prompt(`Insira o dado em vet1[ ${x+1}]`)))
+				  }
+				  for(let x=0;x<10;x++){
+				  	arr2.push(Number(prompt(`Insira o dado em vet2[ ${x+1}]`)))
+				  }
+				  let arr3=[];
+				  for(let x=0; x<arr1.length;x++){
+				  	arr3.push(arr1[x]);
+				  	arr3.push(arr2[x]);
+				  }
+				  for(let x=0;x<arr3.length;x++){
+				  	nan(1,`${arr3[x]} `)
+				  }
+
+			}
+
+			//exe_5_5();
+			const exe_5_6=()=>{
+
+				/*Faça um programa que carregue um vetor
+				  com oito números inteiros, calcule e mostre dois vetores resultantes. O primeiro vetor
+				  resultante deve conter os números positivos. O segundo vetor resultante deve conter
+				  os números negativos. Cada vetor resultante vai ter no máximo oito posições, sendo
+				  que nem todas devem obrigatoriamente ser utilizadas. Imprima o conteúdo dos
+				  vetores resultantes, sem que sejam impressos "lixos de memória".*/
+
+				  let vet=[], pos=[], neg=[];
+				  for(let x=0; x<8;x++){
+				  	vet.push(Number(prompt(`Insira o ${x+1}º dado do vetor`)))
+				  }
+				  for(let x=0;x<vet.length;x++){
+				  	if(vet[x]<=0){
+				  		neg.push(vet[x])
+				  	}else{
+				  		pos.push(vet[x])
+				  	}
+
+				  }
+				  	nan(1,`Positivos: ${pos}<br>`)
+				  	nan(1,`Negativos: ${neg}`)
+			}
+			//exe_5_6();
+			const exe_5_7=()=>{
+
+				/*Desenvolva um algoritmo que preencha cada elemento de uma matriz 3x3 com o
+				  quadrado do valor do índice da linha mais o valor do índice da coluna daquela posição.
+				  Ao final, o algoritmo deve mostrar a matriz, na tela.*/
+				  let vet=[];
+				  for(let x=1; x<=3;x++){
+
+
+				  	let vet2=[];
+				  	for(let j=1;j<=3;j++){
+				  		vet2.push(x**2+j)
+
+				  	}
+				  	vet.push(vet2)
+				  }
+				 for(x of vet){
+				 	nan(1,`${x}<br>`)
+				 }
+			}
+			//exe_5_7();
+			const exe_5_8=()=>{
+
+				/*Desenvolva um algoritmo que preencha uma matriz numérica de dimensões 3x3.
+				  Depois de a matriz ter sido populada, o algoritmo deverá imprimir a matriz da seguinte
+				  forma: os dados da diagonal principal devem ser impressos normalmente e os dados
+				  fora da diagonal principal devem substituídos por zero.*/
+				  let arr=[]
+				  for(x=0;x<3;x++){
+
+				  	arr2=[]
+				  	for(j=0;j<3;j++){
+				  		arr2.push(prompt(`Insira o dado na posição [${x+1},${j+1}]`))
+				  	}
+				  	arr.push(arr2)
+				  }
+				  for(x=0;x<3;x++){
+				  	for(j=0;j<3;j++){
+				  		if(x===j){
+				  			nan(1,`${arr[x][j]}`)
+				  		}else{
+				  			nan(1,`0`)
+				  		}
+				  	}
+				  	nan(1,`<br>`)
+				  }
+			}
+			//exe_5_8();
+
+			const exe_5_9=()=>{
+
+				/*Desenvolva um algoritmo que preencha uma matriz numérica de dimensões 3x3. Ao
+				  final, o algoritmo deve mostrar o somatório de todos os elementos da matriz, bem
+				  como a média aritmética entre todos os termos.*/
+
+				  let arr=[]
+				  for(let x=0;x<3;x++){
+				  	arr2=[]
+				  	for(j=0;j<3;j++){
+				  		arr2.push(Number(prompt(`Insira o número da posição ${x+1}, ${j+1}`)))
+				  	}
+				  	arr.push(arr2)
+				  }
+				  let soma=0
+				  for(x of arr){
+				  	for(j of x){
+				  		soma+=j
+				  	}
+				  }
+				  nan(soma,`Somatório: ${soma}<br>`)
+				  nan(soma,`Média: ${soma/9}`)
+			}
+
+			//exe_5_9();
+			const exe_5_10=()=>{
+				/*Faça um programa que carregue uma
+				  matriz 2x2, calcule e mostre uma matriz resultante que será a própria matriz digitada
+				  multiplicada pelo maior elemento da matriz.*/
+				  let arr=[]
+				  for(x=0;x<2;x++){
+				  	let arr2=[]
+				  	for(j=0;j<2;j++){
+				  		arr2.push(Number(prompt(`Insira o número da posição ${x+1}, ${j+1}`)))
+				  	}
+				  	arr.push(arr2)
+
+				  }
+				  let m=0
+				  for(x of arr){
+				  	if(Math.max(...x)>m){
+				  		m=Math.max(...x)
+				  		}
+				  }
+				  for(let x=0;x<2;x++){
+				  		for(j=0;j<2;j++){
+				  			nan(arr[x][j],`${arr[x][j]*m} `)
+				  		}
+				  		nan(1,`<br>`)
+
+				  }
+
+			}
+			//exe_5_10();
+			const exe_5_11=()=>{
+				/*Desenvolva um algoritmo que preencha uma matriz numérico de dimensões 3x3. Após
+				  preencher todo a matriz, o usuário deve inserir uma chave de busca X. Caso exista
+				  algum número igual a X, dentro da matriz, o algoritmo deve mostrar, na tela, os índices
+				  da linha e da coluna da posição na qual na qual X foi encontrado pela primeira vez.
+				  Caso contrário, o algoritmo deve se encerrar com uma única mensagem, dizendo
+"				  Chave não encontrada.".*/
+				let arr=[]
+				for(let x=0;x<3;x++){
+					let arr2=[]
+					for(let j=0;j<3;j++){
+						arr2.push(Number(prompt(`Insira o número da posição ${x+1}, ${j+1}`)))
+					}
+					arr.push(arr2);
+				}
+				let c=Number(prompt(`Insira qual número deseja procurar na matriz`))
+				let f=false;
+				for(let x=0;x<3;x++){
+					for(let j=0;j<3;j++){
+						if(c===arr[x][j]){
+							nan(c,`Chave encontrada na linha: ${x+1},coluna: ${j+1}`)
+							f=true;
+							break;
+						}
+
+					}
+
+				}
+				if(f===false){
+					nan(1,`Chave não encontrada`)
+				}
+			}
+
+
+			//exe_5_11();
+			const exe_5_12=()=>{
+				/*Faça um programa que carregue uma
+				  matriz 3 x 5 com números inteiros e some cada uma das linhas, armazenando o
+				  resultado das somas em um vetor. A seguir, multiplique cada elemento da matriz pela
+				  soma da respectiva linha daquele elemento e mostre a matriz resultante.*/
+				  let arr=[]
+				  let somas=[]
+				  for(let x=0;x<3;x++){
+				  	let arr2=[]
+				  	soma=0
+				  	for(j=0;j<5;j++){
+				  		arr2.push(Number(prompt(`Insira o número da posição ${x+1}, ${j+1}`)))
+				  		soma+=arr2[j]
+				  	}
+				  	arr.push(arr2)
+				  	somas.push(soma)
+				  }
+				  for(let x=0;x<3;x++){
+				  	for(let j=0; j<5;j++){
+				  		nan(j,`${arr[x][j]*somas[x]}	`)
+				  	}
+				  	nan(1,`<br>`)
+				  }
+			}
+			//exe_5_12();
+			const exe_5_13=()=>{
+
+				/*Faça um programa que carregue uma
+				  matriz 10x3 com as três notas de dez alunos. Mostre um relatório com o número do
+				  aluno (número da linha) e a prova em que cada aluno obteve menor nota. Ao final do
+				  relatório, mostre quantos alunos tiveram menor nota na prova 1, quantos alunos
+				  tiveram menor nota na prova 2 e quantos alunos tiveram menor nota na prova 3.*/
+				  let arr=[],m1=[],m2=[],m3=[];
+				  for(let x=0;x<10;x++){
+				  	let notas=[];
+				  	for(j=0;j<3;j++){
+				  		notas.push(Number(prompt(`Insira a ${j+1}ª nota do ${x+1}º aluno:`)))
+				  	}
+				  	arr.push(notas);
+				  }
+				  for(let x=0;x<10;x++){
+				  	let i=arr[x].indexOf(Math.min(...arr[x]))
+				  	if(i===0){
+				  		m1.push(x)
+				  	}else if(i===1){
+				  		m2.push(x)
+				  	}else if(i===2){
+				  		m3.push(x)
+				  	}
+				  }
+				  for(x=0;x<10;x++){
+				  	nan(1,`Aluno${x+1}<br>Prova de menor nota: ${arr[x].indexOf(Math.min(...arr[x]))}<br>`);
+				  }
+				  nan(1,`${m1.length} tiveram a menor nota na 1ª prova<br>`);
+				  nan(1,`${m2.length} tiveram a menor nota na 2ª prova<br>`);
+				  nan(1,`${m3.length} tiveram a menor nota na 3ª prova<br>`);
+
+
+			}
+			//exe_5_13();
+			const exe_5_14=()=>{
+
+				/*Faça um programa que seja capaz de armazenar os dados de três pessoas: nome,
+				  idade, peso e altura. Ao final, o algoritmo deve mostrar, na tela, o nome e a idade da
+				  primeira pessoa e o peso e altura da última pessoa.*/
+				  let pessoas=[];
+				 
+				  for(x=0;x<3;x++){
+				  	let pessoa={};
+				  	pessoa.nome=prompt(`Digite o nome da pessoa ${x+1}:`);
+				  	console.log(pessoa);
+				  	pessoa.idade=prompt(`Digite a idade da pessoa ${x+1}`);
+				  	console.log(pessoa);
+				  	pessoa.altura=prompt(`Digite a altura da pessoa ${x+1}`);
+				  	console.log(pessoa);
+				  	pessoa.peso=prompt(`Digite o peso da pessoa ${x+1}`);
+				  	console.log(pessoa);
+				  	pessoas.push(pessoa);
+
+				  }
+				  nan(1,`Nome da primeira pessoa: ${pessoas[0].nome}<br>`);
+				  nan(1,`Idade da primeira pessoa: ${pessoas[0].idade}<br>`);
+				  nan(1,`Peso da última pessoa: ${pessoas[2].peso}<br>`);
+				  nan(1,`Altura da última pessoa: ${pessoas[2].altura}<br>`);
+			}
+			//exe_5_14();
+			
 		
 
 
